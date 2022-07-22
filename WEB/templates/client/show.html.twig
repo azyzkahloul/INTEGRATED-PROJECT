@@ -1,0 +1,69 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+            <div class="row mt-3">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Liste des clients</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+
+        <tbody>
+            <tr>
+                <th>Id client</th>
+                <td>{{ client.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ client.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prénom</th>
+                <td>{{ client.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Numéro de télephone</th>
+                <td>{{ client.numtel }}</td>
+            </tr>
+            <tr>
+                <th>Immatricule voiture</th>
+                <td>{{ client.voitmat }}</td>
+            </tr>
+            <tr>
+                <th>Insta monnaie</th>
+                <td>{{ client.instamon }}</td>
+            </tr>
+            <tr>
+                <th>Login</th>
+                <td>{{ client.login }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ client.password }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ client.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_client') }}">Liste des clients </a>
+
+
+
+    {{ include('client/_delete_form.html.twig') }}
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+

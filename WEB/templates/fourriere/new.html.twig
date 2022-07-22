@@ -1,0 +1,32 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+            <div class="row mt-3">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Liste des fourrières</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+
+
+                                {{ include('fourriere/_form.html.twig') }}
+
+   
+</table>
+    <button class="btn btn-info">
+    <a href="{{ path('app_fourriere') }}">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

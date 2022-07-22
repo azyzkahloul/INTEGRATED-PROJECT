@@ -1,0 +1,70 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+            <div class="row mt-3">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Liste des fourrières</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id fourrière</th>
+                <th>Nom fourrière</th>
+                <th>Nombre de place</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fourriere in fourrieres %}
+            <tr>
+                <td>{{ fourriere.id }}</td>
+                <td>{{ fourriere.nomf }}</td>
+                <td>{{ fourriere.nbplace }}</td>
+                <td>{{ fourriere.flatitude }}</td>
+                <td>{{ fourriere.flongitude }}</td>
+                <td>
+          
+                     <button type="button" class="btn btn-danger">  
+                                              <a href="{{ path('fourriere_show', {'id': fourriere.id}) }}" >
+                                              <i class="fa fa-eye" aria-hidden="true"></i></a>
+                                              </button>
+                                                <button type="button" class="btn btn-danger">
+                                                <a href="{{  path('fourriere_edit', {'id': fourriere.id}) }}">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </a></button>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-info"> 
+            <a href="{{ path('fourriere_new') }}" style="float: right;" ><i class="fa fa-plus" aria-hidden="true"></i> Créer une facture</a>
+          
+            </button>  
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+
+
+
+
+

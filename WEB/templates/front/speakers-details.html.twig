@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>InstaPark</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+ <link rel="icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../assets/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="../assets/lib/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+
+ 
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><img src="../assets/img/logo.png" alt="" title=""></a>
+      </div>
+
+      
+    
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    
+  </section>
+             <table>
+                                    <tr>
+                                    {% for parking in parkings %}
+                                    <td>
+                                    <div class="container-fluid row">
+                                      <div class="card" style="width: 18rem;">
+                                     <img class="card-img-top" src="..." alt="Card image cap">
+                                     <div class="card-body">
+                                     <h5 class="card-title">nom de parking</h5>
+                                     <p class="card-text">
+                                      
+                                            {{ parking.nomp }}
+                                            {{ parking.nbplace }}
+                                    
+                                        </div>
+                                        </div>
+                
+                                       <a href="#" class="btn btn-primary">Voir detail</a>
+                                      
+                                       </p>
+                                       
+                                       </div>
+                                       </td>
+                                    {% else %}
+                                        <tr>
+                                            <td colspan="6">no records found</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tr>
+                                    </table>
+                                    </div>
+                                    </div>
+                                  
+                                  
+                           

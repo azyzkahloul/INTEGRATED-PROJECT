@@ -1,0 +1,61 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+        <div class="content-wrapper">
+            <div class="container-fluid">
+
+                <div class="row mt-3">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Liste des parkings</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th>Id parking</th>
+                <td>{{ parking.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom parking</th>
+                <td>{{ parking.nomp }}</td>
+            </tr>
+            <tr>
+                <th>Nombre de place</th>
+                <td>{{ parking.nbplace }}</td>
+            </tr>
+            <tr>
+                <th>Latitude</th>
+                <td>{{ parking.platitude }}</td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td>{{ parking.plongitude }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <button class="btn btn-outline-danger">
+    <a href="{{ path('facture_editt', {'id': parking.id}) }}">
+    <i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+
+    
+
+    {{ include('parking/_delete_form.html.twig') }}
+    </div>
+    </div>
+       <a href="{{ path('app_parking') }}">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      
+    </a>
+    <br>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+

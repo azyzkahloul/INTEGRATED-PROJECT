@@ -1,0 +1,25 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+
+            {{ form_widget(form.nom, {'attr': {'placeholder': 'Entrer le nom'}}) }}
+
+
+            {{ form_widget(form.prenom, {'attr': {'placeholder': 'Entrer le prénom'}}) }}
+
+
+            {{ form_widget(form.numtel, {'attr': {'placeholder': 'Entrer le numéro de téléphone'}}) }}
+
+
+            {{ form_widget(form.login, {'attr': {'placeholder': 'Entrer le login'}}) }}
+
+
+            {{ form_widget(form.password,{'attr': {'placeholder': 'Entrer le mot de passe'}}) }}
+
+
+
+<div class="text-center">
+    <button class="btn">{{ button_label|default('Enregistrer') }}</button>
+
+</div>
+
+{{ form_end(form) }}

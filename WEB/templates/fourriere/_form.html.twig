@@ -1,0 +1,18 @@
+{{ form_start(form) }}
+{{ form_widget(form) }}
+
+            {{ form_widget(form.nomf, {'attr': {'placeholder': 'Entrer le nom de fourrière'}}) }}
+
+            {{ form_widget(form.nbplace, {'attr': {'placeholder': 'Entrer le nombre de places de fourrière'}}) }}
+
+            {{ form_widget(form.flatitude, {'attr': {'placeholder': 'Entrer la latitude de fourrière'}}) }}
+
+
+            {{ form_widget(form.flongitude, {'attr': {'placeholder': 'Entrer la Longitude de fourrière'}}) }}
+
+<br>
+<div class="text-center">
+    <button class="btn">{{ button_label|default('Enregistrer') }}</button>
+
+</div>
+{{ form_end(form) }}

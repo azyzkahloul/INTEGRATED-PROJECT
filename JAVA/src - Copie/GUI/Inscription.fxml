@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.InscriptionController">
+   <children>
+      <AnchorPane fx:id="inscr" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="778.0">
+         <children>
+            <ImageView fitHeight="539.0" fitWidth="781.0" layoutX="-3.0" style="-fx-background-color: 0; -fx-border-width: 0 0 2 0; -fx-border-color: white; -fx-prompt-text-fill: black;">
+               <image>
+                  <Image url="@../Images/b198b498a054ef7b530c7d0ad0412a7f.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="75.0" fitWidth="191.0" layoutX="309.0" layoutY="70.0">
+               <image>
+                  <Image url="@../Images/logo.png" />
+               </image>
+            </ImageView>
+            <VBox fx:id="pageinscription" layoutX="155.0" layoutY="151.0" prefHeight="487.0" prefWidth="517.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="13.0" prefWidth="511.0">
+                     <children>
+                        <Label fx:id="invalid" prefHeight="17.0" prefWidth="515.0" textFill="RED" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="38.0" prefWidth="511.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="54.0">
+                           <image>
+                              <Image url="@../Images/download-icon-employee+id+job+seeker+unemployee+work+icon-1320184367871055536_512.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="Nom" prefHeight="25.0" prefWidth="208.0" promptText="Nom" style="-fx-background-color: 0; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-prompt-text-fill: white;">
+                           <HBox.margin>
+                              <Insets left="1.0" right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <ImageView fitHeight="30.0" fitWidth="47.0">
+                           <image>
+                              <Image url="@../Images/download-icon-employee+id+job+seeker+unemployee+work+icon-1320184367871055536_512.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="Prenom" prefHeight="25.0" prefWidth="208.0" promptText="Prénom" style="-fx-background-color: 0; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white; -fx-prompt-text-fill: white;">
+                           <HBox.margin>
+                              <Insets left="1.0" right="20.0" />
+                           </HBox.margin></TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="53.0" prefWidth="511.0">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="38.0">
+                           <image>
+                              <Image url="@../Images/960-9602830_email-verification-email-verify-icon-png-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="email" prefHeight="25.0" prefWidth="208.0" promptText="Email" style="-fx-background-color: 0; -fx-border-width: 0 0 2 0; -fx-border-color: white; -fx-prompt-text-fill: white;">
+                           <HBox.margin>
+                              <Insets left="3.0" right="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <ImageView fitHeight="25.0" fitWidth="26.0">
+                           <image>
+                              <Image url="@../Images/252-2527504_phone-call-icon-2-blue-phone-call-icon-2-blue-removebg-preview.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView>
+                           <image>
+                              <Image url="@../Images/calendar.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="num" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="208.0" promptText="Numéro de télephone" style="-fx-background-color: 0; -fx-border-width: 0 0 2 0; -fx-border-color: white; -fx-prompt-text-fill: white;">
+                           <HBox.margin>
+                              <Insets left="15.0" right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="511.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="38.0">
+                           <image>
+                              <Image url="@../Images/290122.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="matricule" prefHeight="25.0" prefWidth="208.0" promptText="Matricule voiture" style="-fx-background-color: 0; -fx-border-width: 0 0 2 0; -fx-border-color: white; -fx-prompt-text-fill: white;">
+                           <HBox.margin>
+                              <Insets left="3.0" right="50.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" right="5.0" />
+                           </padding>
+                        </TextField>
+                        <ImageView fitHeight="41.0" fitWidth="52.0">
+                           <image>
+                              <Image url="@../Images/actualité.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="-55.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView>
+                           <image>
+                              <Image url="@../Images/address.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="statut" prefHeight="25.0" prefWidth="208.0" promptText="Statut" style="-fx-background-color: 0; -fx-border-width: 0 0 2 0; -fx-border-color: white; -fx-prompt-text-fill: white;">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="-6.0" />
+                           </HBox.margin></TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="39.0" prefWidth="511.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="34.0">
+                           <image>
+                              <Image url="@../Images/272354.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="mdp" prefHeight="27.0" prefWidth="275.0" promptText="Mot de passe" style="-fx-background-color: 0; -fx-border-width: 0 0 2 0; -fx-border-color: white; -fx-prompt-text-fill: white;">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </PasswordField>
+                        <ImageView fitHeight="28.0" fitWidth="30.0">
+                           <image>
+                              <Image url="@../Images/6195699.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView>
+                           <image>
+                              <Image url="@../Images/key.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="Cmdp" prefHeight="27.0" prefWidth="300.0" promptText="Confirmer mot de passe" style="-fx-background-color: 0; -fx-border-width: 0 0 2 0; -fx-border-color: white; -fx-prompt-text-fill: white;">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </PasswordField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="511.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@../Images/6212602.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="inscription" alignment="CENTER" mnemonicParsing="false" onAction="#terminer" prefHeight="31.0" prefWidth="113.0" style="-fx-background-color: 0; -fx-prompt-text-fill: BLACK;" text="S'inscrire" textFill="#1ac1b6">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="-12.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="back" layoutX="639.0" layoutY="27.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: 0;" text="retour" textFill="#1ac1b6">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

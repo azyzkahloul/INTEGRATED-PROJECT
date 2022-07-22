@@ -1,0 +1,60 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+
+
+
+        <div class="content-wrapper">
+            <div class="container-fluid">
+
+                <div class="row mt-3">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Liste des parkings</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+    {{ include('parking/_form.html.twig') }}
+
+    <a href="{{ path('app_parking') }}">back to list</a>
+<button class="btn btn-info">
+    <a href="{{ path('app_parking') }}">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </body>
+
+ {{ form_start(form, { 'attr' : {'novalidate' : 'novalidate'}}) }}
+
+ {{ form_widget(form) }}
+
+  <button type="submit" class="btn btn-success">Créer</button>
+ {{ form_end(form) }}
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+
+    <!-- simplebar js -->
+    <script src="{{ asset('assets/plugins/simplebar/js/simplebar.js') }}"></script>
+    <!-- sidebar-menu js -->
+    <script src="{{ asset('assets/js/sidebar-menu.js') }}"></script>
+
+    <!-- Custom scripts -->
+    <script src="{{ asset('assets/js/app-script.js') }}"></script>
+    <script src=""{{ asset('assets/js/pace.min.js') }}"></script>
+
+
+{% endblock %}

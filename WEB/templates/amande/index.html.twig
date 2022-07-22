@@ -1,0 +1,58 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+            <div class="content-wrapper">
+                <div class="container-fluid">
+
+                    <div class="row mt-3">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Liste des amandes</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+
+
+        <thead>
+            <tr>
+                <th>Id amande</th>
+                <th>Total</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for amande in amandes %}
+            <tr>
+                <td>{{ amande.id }}</td>
+                <td>{{ amande.total }}</td>
+                <td>
+                <button class="btn btn-info">
+                    <a href="{{ path('amande_show', {'id': amande.id}) }}">show</a>
+                    </button>
+                    <button class="btn btn-info">
+                    <a href="{{ path('amande_edit', {'id': amande.id}) }}">edit</a>
+                     </button>
+                </td>
+
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                            <a href="{{ path('amande_new') }}" style="float: right;">Créer une amande</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    {% endblock %}
+
+

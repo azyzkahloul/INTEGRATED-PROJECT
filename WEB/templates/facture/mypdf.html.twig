@@ -1,0 +1,31 @@
+
+{% block body %}
+<h1 align = "center" > FACTURE </h1>
+          <table class="table table-striped">
+
+
+                                <thead>
+            <tr>
+                <th>Id facture</th>
+                <th>Nombre d'heures</th>
+                <th>Prix unitaire</th>
+                <th>Total</th>
+                <th>Date d'entrer</th>
+        
+            </tr>
+        </thead>
+        <tbody>
+        {% for facture in factures %}
+            <tr>
+                <td>{{ facture.id }}</td>
+                <td>{{ facture.nbheure }}</td>
+                <td>{{ facture.pu }}</td>
+                <td>{{ facture.total }}</td>
+                <td>{{ facture.dateentrer ? facture.dateentrer|date('Y-m-d') : '' }}</td>
+                
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
+

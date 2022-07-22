@@ -1,0 +1,20 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+
+            {{ form_widget(form.nbheure, {'attr': {'placeholder': 'Entrer le nombre d"heures'}}) }}
+
+            {{ form_widget(form.pu, {'attr': {'placeholder': 'Entrer le prix unitaire'}}) }}
+
+            {{ form_widget(form.total, {'attr': {'placeholder': 'Entrer le total de prix'}}) }}
+
+            {{ form_widget(form.dateentrer, {'attr': {'placeholder': 'Entrer le date d"entrer'}}) }}
+
+
+<div class="text-center">
+
+<button class="btn btn-info">{{ button_label|default('Enregistrer') }}
+   
+    </button>
+</div>
+
+{{ form_end(form) }}

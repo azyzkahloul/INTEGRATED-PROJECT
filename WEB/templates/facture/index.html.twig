@@ -1,0 +1,84 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+<form method="post" action="{{"facture_tri"}}">
+             <label>
+		            <select class="form-control" name="type">
+			            <option>Croissant</option>
+			            <option>Décroissant</option>
+			        </select>
+		        </label>
+		        <input type="submit" class="btn btn-success" value="Trier!" >
+
+  </form>
+
+
+    <tr>
+            <form method="" action="{{"facture_search"}}" >
+                <label>
+                    <input PLACEHOLDER="Search" type="text" name="data" class="form-control">
+                </label>
+                        <input type="submit" class="btn btn-success" value="FIND" >
+            </form>
+        </tr>
+        
+            <div class="row mt-3">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Liste des factures</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+
+
+                                <thead>
+            <tr>
+                <th>Id facture</th>
+                <th>Nombre d'heures</th>
+                <th>Prix unitaire</th>
+                <th>Total</th>
+                <th>Date d'entrer</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for facture in factures %}
+            <tr>
+                <td>{{ facture.id }}</td>
+                <td>{{ facture.nbheure }}</td>
+                <td>{{ facture.pu }}</td>
+                <td>{{ facture.total }}</td>
+                <td>{{ facture.dateentrer ? facture.dateentrer|date('Y-m-d') : '' }}</td>
+                <td>
+                <button class="btn btn-info">
+                    <a href="{{ path('facture_show', {'id_facture': facture.id}) }}">show</a>
+                    </button>
+                    <button class="btn btn-info">
+                    <a href="{{ path('facture_edit', {'id_facture': facture.id}) }}">edit</a>
+                    </button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+    </div>
+
+    </div>
+    </div>
+    <a href="{{ path('facture_new') }}" style="float: right;">Créer Nouvelle facture</a>
+    </div>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}
+

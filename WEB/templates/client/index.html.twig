@@ -1,0 +1,67 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+            <div class="row mt-3">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Liste des clients</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+
+                                    <tr>
+                                        <th>ID client</th>
+                                        <th>Nom</th>
+                                        <th>Prénom</th>
+                                        <th>Numéro de télephone</th>
+                                        <th>Immatricule voiture</th>
+                                        <th>Insta monaie</th>
+                                        <th>Login</th>
+                                        <th>Password</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for client in clients %}
+                                        <tr>
+                                            <td>{{ client.id }}</td>
+                                            <td>{{ client.nom }}</td>
+                                            <td>{{ client.prenom }}</td>
+                                            <td>{{ client.numtel }}</td>
+                                            <td>{{ client.voitmat }}</td>
+                                            <td>{{ client.instamon }}</td>
+                                            <td>{{ client.login }}</td>
+                                            <td>{{ client.password }}</td>
+                                            <td>{{ client.status }}</td>
+                                            <td>
+                                                <a href="{{ path('client_show', {'id_client': client.id}) }}">show</a>
+                                                <a href="{{ path('client_edit', {'id_client': client.id}) }}">edit</a>
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        <tr>
+                                            <td colspan="10">no records found</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{{ path('client_new') }} " style="float: right;">Créer Nouveau client</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+

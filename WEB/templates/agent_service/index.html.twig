@@ -1,0 +1,60 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+            <div class="row mt-3">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Liste des agents de service</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+
+
+        <thead>
+            <tr>
+                <th>Id agent service</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Numéro de télephone</th>
+                <th>Login</th>
+                <th>Password</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for agent_service in agent_services %}
+            <tr>
+                <td>{{ agent_service.id }}</td>
+                <td>{{ agent_service.nom }}</td>
+                <td>{{ agent_service.prenom }}</td>
+                <td>{{ agent_service.numtel }}</td>
+                <td>{{ agent_service.login }}</td>
+                <td>{{ agent_service.password }}</td>
+                <td>
+                    <a href="{{ path('agent_service_show', {'id_agent_serv': agent_service.id}) }}">show</a>
+                    <a href="{{ path('agent_service_edit', {'id_agent_serv': agent_service.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{{ path('agent_service_new') }} " style="float: right;">Créer agent de service</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+
+

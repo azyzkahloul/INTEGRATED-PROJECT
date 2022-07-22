@@ -1,0 +1,6 @@
+<form method="post" action="{{ path('fourriere_delete', {'id': fourriere.id}) }}" onsubmit="return confirm('Voulez vous supprimer ce fourrière?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ fourriere.id) }}">
+    <button class="btn btn-outline-danger">
+    <i class="fa fa-trash-o" aria-hidden="true"></i>
+    </button>
+</form>

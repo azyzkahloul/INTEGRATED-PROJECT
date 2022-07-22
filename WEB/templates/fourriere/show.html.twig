@@ -1,0 +1,58 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+            <div class="row mt-3">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Liste des fourrières</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+
+        <tbody>
+            <tr>
+                <th>Id fourrière</th>
+                <td>{{ fourriere.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom de fourrière</th>
+                <td>{{ fourriere.nomf }}</td>
+            </tr>
+            <tr>
+                <th>Nombre de place</th>
+                <td>{{ fourriere.nbplace }}</td>
+            </tr>
+            <tr>
+                <th>Latitude de fourrière</th>
+                <td>{{ fourriere.flatitude }}</td>
+            </tr>
+            <tr>
+                <th>Longitude de fourrière</th>
+                <td>{{ fourriere.flongitude }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+<br>
+    <a href="{{ path('fourriere_edit', {'id': fourriere.id}) }}"> Modifier </a>
+                                <br>
+                                
+
+
+                                    {{ include('fourriere/_delete_form.html.twig') }}
+
+</div>
+
+                            <a href="{{ path('app_fourriere') }}" style="float: right;">Liste des fourrières </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="463.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ResetController">
+   <children>
+      <ImageView fitHeight="26.0" fitWidth="140.0" layoutX="-19.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="annuler" layoutX="29.0" layoutY="25.0" mnemonicParsing="false" onAction="#annuler" text="Button" />
+      <ImageView fitHeight="477.0" fitWidth="331.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/b198b498a054ef7b530c7d0ad0412a7f.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="398.0" layoutY="100.0" text="Nouvelle mot de passe">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.027450980618596077" green="0.01568627543747425" blue="0.5254902243614197" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.10196078568696976" green="0.7568627595901489" blue="0.7137255072593689" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Label layoutX="400.0" layoutY="180.0" text="Vérifier mot de passe">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.027450980618596077" green="0.01568627543747425" blue="0.5254902243614197" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.10196078568696976" green="0.7568627595901489" blue="0.7137255072593689" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Button fx:id="Reset" layoutX="488.0" layoutY="321.0" mnemonicParsing="false" onAction="#ResetPass" onMouseClicked="#ResetPass" stylesheets="@../style/style.css" text="Réinitialiser" textFill="#070486">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="valider-button" />
+         </styleClass>
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font></Button>
+      <Label layoutX="402.0" layoutY="254.0" prefHeight="21.0" prefWidth="120.0" text="Adresse e-mail">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.027450980618596077" green="0.01568627543747425" blue="0.5254902243614197" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.10196078568696976" green="0.7568627595901489" blue="0.7137255072593689" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <TextField fx:id="youremail" layoutX="554.0" layoutY="250.0" prefHeight="26.0" prefWidth="134.0" />
+      <PasswordField fx:id="Newpasswd" layoutX="555.0" layoutY="98.0" prefHeight="26.0" prefWidth="134.0" />
+      <PasswordField fx:id="verifypasswd" layoutX="555.0" layoutY="176.0" prefHeight="26.0" prefWidth="134.0" />
+      <ImageView fitHeight="122.0" fitWidth="265.0" layoutX="30.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="182.0" layoutX="285.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/téléchargement-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="52.0" layoutX="345.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/6195699.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="52.0" layoutX="345.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/960-9602830_email-verification-email-verify-icon-png-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

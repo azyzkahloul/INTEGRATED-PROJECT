@@ -1,0 +1,33 @@
+{{ form_start(form) }}
+<tr ><td>Nom</td><td>{{ form_widget(form.nom) }}</td>
+    <td class="text-danger">{{ form_errors(form.nom) }} </td>
+</tr>
+<tr><td>Prénom</td><td>{{ form_widget(form.prenom) }}</td>
+    <td class="text-danger">{{ form_errors(form.prenom) }} </td>
+</tr>
+<tr><td>N°Télephone</td><td>{{ form_widget(form.numtel) }}</td>
+    <td class="text-danger">{{ form_errors(form.numtel) }} </td>
+</tr>
+<tr><td>Immatricule voiture</td><td>{{ form_widget(form.voitmat) }}</td>
+    <td class="text-danger">{{ form_errors(form.voitmat) }} </td>
+</tr>
+<tr><td>Valeur instamonnaie</td><td>{{ form_widget(form.instamon) }}</td>
+    <td class="text-danger">{{ form_errors(form.instamon) }} </td>
+</tr>
+<tr><td>Email</td><td>{{ form_widget(form.login) }}</td>
+    <td class="text-danger">{{ form_errors(form.login) }} </td>
+</tr>
+<tr><td>Mot De Passe</td><td>{{ form_widget(form.password) }}</td>
+    <td class="text-danger">{{ form_errors(form.password) }} </td>
+</tr>
+<tr><td>Status</td><td>{{ form_widget(form.status) }}</td>
+    <td class="text-danger">{{ form_errors(form.status) }} </td>
+</tr>
+</table>
+<br>
+<div class="text-center">
+    <button class="btn">{{ button_label|default('Enregistrer') }}</button>
+</div>
+
+{{ form_end(form) }}
+

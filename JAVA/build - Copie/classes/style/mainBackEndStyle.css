@@ -1,0 +1,16 @@
+.root{
+    -fx-font: 16px "Courier New";
+
+}
+
+Button{
+    -fx-font: 10px "Tahoma";
+    -fx-background-color:  #89d6fb;
+    -fx-text-fill: #01303f;
+}
+
+Button:hover{
+    -fx-background-color: #01303f;
+    -fx-text-fill: #89d6fb;
+}
+

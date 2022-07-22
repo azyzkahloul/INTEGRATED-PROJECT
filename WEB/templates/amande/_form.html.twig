@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+{{ form_widget(form.total,  {'value': '50'}) }}
+
+<div class="text-center">
+    <button class="btn btn-info">{{ button_label|default('Enregistrer') }}</button>
+</div>
+
+{{ form_end(form) }}

@@ -1,0 +1,15 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+
+            {{ form_widget(form.objet, {'attr': {'placeholder': 'Entrer le nombre de places de client'}}) }}
+
+            {{ form_widget(form.description, {'attr': {'placeholder': 'Entrer le nombre de places de client'}}) }}
+
+            {{ form_widget(form.etat, {'attr': {'placeholder': 'Entrer le nombre de places de client'}}) }}
+
+<br>
+<div class="text-center">
+    <button class="btn">{{ button_label|default('Enregistrer') }}</button>
+
+</div>
+{{ form_end(form) }}

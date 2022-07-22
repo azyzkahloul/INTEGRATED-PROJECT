@@ -1,0 +1,16 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+
+            {{ form_widget(form.nomp, {'attr': {'placeholder': 'Entrer le prénom de parking' }}) }}
+
+            {{ form_widget(form.nbplace, {'attr': {'placeholder': 'Entrer le nombre de places'}}) }}
+
+            {{ form_widget(form.platitude, {'attr': {'placeholder': 'Entrer la latitude de parking'}}) }}
+
+            {{ form_widget(form.plongitude, {'attr': {'placeholder': 'Entrer la longitude de parking'}}) }}
+
+<div class="text-center">
+<button class="btn">{{ button_label|default('Enregistrer') }}</button>
+</div>
+
+{{ form_end(form) }}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ParmailController">
+   <children>
+      <Label layoutX="405.0" layoutY="131.0" text="Saisir l'adresse E-mail ">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.027450980618596077" green="0.01568627543747425" blue="0.5254902243614197" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.10196078568696976" green="0.7568627595901489" blue="0.7137255072593689" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Label layoutX="412.0" layoutY="266.0" text="Vérifier Code ">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.027450980618596077" green="0.01568627543747425" blue="0.5254902243614197" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.10196078568696976" green="0.7568627595901489" blue="0.7137255072593689" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <TextField fx:id="txt_Email" layoutX="566.0" layoutY="127.0" promptText="Saisir votre mail" />
+      <TextField fx:id="txtCode" layoutX="566.0" layoutY="263.0" promptText="Saisir le code" />
+      <Button layoutX="504.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#Send" prefHeight="37.0" prefWidth="78.0" stylesheets="@../style/style.css" text="Envoyer" textFill="#070486">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="valider-button" />
+         </styleClass></Button>
+      <Button layoutX="511.0" layoutY="315.0" mnemonicParsing="false" onMouseClicked="#Verify" prefHeight="38.0" prefWidth="78.0" stylesheets="@../style/style.css" text="Vérifier" textFill="#070486">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="valider-button" />
+         </styleClass></Button>
+      <ImageView fitHeight="510.0" fitWidth="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/b198b498a054ef7b530c7d0ad0412a7f.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="122.0" fitWidth="265.0" layoutX="43.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="358.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/email-logo-psd-416940.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="361.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/34-343408_checkmark-icon-check-icon-done-checkmark-tick-icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

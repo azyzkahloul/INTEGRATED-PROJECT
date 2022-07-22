@@ -1,0 +1,53 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+        <div class="content-wrapper">
+            <div class="container-fluid">
+
+                <div class="row mt-3">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Liste des agents de services</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+        <tbody>
+
+            <tr>
+                <th>Nom</th>
+                <td>{{ agent_service.id }}</td>
+            </tr>
+
+                <th>Nom</th>
+                <td>{{ agent_service.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prénom</th>
+                <td>{{ agent_service.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Numéro de télephone</th>
+                <td>{{ agent_service.numtel }}</td>
+            </tr>
+            <tr>
+                <th>Login</th>
+                <td>{{ agent_service.login }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ agent_service.password }}</td>
+            </tr>
+        </tbody>
+    </table>
+                                    <a href="{{ path('app_agentservice') }}" style="float: right;">Liste des agents de service </a>
+
+    <a href="{{ path('agent_service_edit', {'id_agent_serv': agent_service.id}) }}">Modifier</a>
+
+    {{ include('agent_service/_delete_form.html.twig') }}
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}

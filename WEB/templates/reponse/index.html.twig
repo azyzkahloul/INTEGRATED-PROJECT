@@ -1,0 +1,58 @@
+{% extends'baseBack.html.twig' %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+            <div class="row mt-3">
+                <div class="col-lg-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Liste des réponses</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id réclamation</th>
+                <th>Réponse</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reponse in reponses %}
+            <tr>
+                <td>{{ reponse.id }}</td>
+                <td>{{ reponse.rps }}</td>
+                <td>
+                    <a href="{{ path('reponse_show', {'id': reponse.id}) }}">show <br></a>
+                    <a href="{{ path('reponse_edit', {'id': reponse.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
